@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="theme-color" content="#303600">
-  <meta name="description" content="Contact Hallmark MicroBambooCotton for sales, enquiries, fabric exports and sustainability.">
-
+  <meta name="description" content="Contact Hallmark MicroBambooCotton for sales enquiries, fabric sourcing, textile exports and product information.">
   <title>Contact | Hallmark MicroBambooCotton</title>
 
   <style>
@@ -28,317 +26,416 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--cream);
       color: var(--text);
-      min-height: 100vh;
-      padding: 28px 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      line-height: 1.7;
     }
 
-    .page {
-      width: 100%;
-      max-width: 510px;
-      background: var(--white);
-      border: 1px solid #e5e4d7;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 16px 50px rgba(48, 54, 0, 0.09);
+    a {
+      color: inherit;
     }
 
-    .header {
+    .topbar {
       background: var(--olive-dark);
       color: var(--white);
-      padding: 38px 26px 32px;
-      text-align: center;
-      position: relative;
+      padding: 14px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
-    .header::after {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 15px;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 6px;
+      padding: 4px;
+    }
+
+    .topbar a {
+      font-size: 13px;
+      text-decoration: none;
+      color: #f2e5b9;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 76px 20px 68px;
+      background:
+        radial-gradient(ellipse at top, #69712a 0%, transparent 65%),
+        var(--olive-dark);
+      color: var(--white);
+    }
+
+    .hero::after {
       content: "";
       display: block;
-      width: 54px;
+      width: 70px;
       height: 3px;
       background: var(--gold);
       margin: 26px auto 0;
-      border-radius: 3px;
     }
 
-    .logo {
-      display: block;
-      width: min(100%, 330px);
-      max-height: 130px;
+    .hero-logo {
+      width: 155px;
+      max-width: 60%;
+      height: auto;
       object-fit: contain;
-      margin: 0 auto 22px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      margin-bottom: 26px;
     }
 
     .eyebrow {
-      color: #d9dba9;
-      font-size: 11px;
-      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      letter-spacing: 4px;
+      font-size: 11px;
+      color: #e6d18d;
+      margin-bottom: 14px;
     }
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(29px, 7vw, 38px);
+      font-size: clamp(32px, 5vw, 52px);
       font-weight: 400;
       line-height: 1.2;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    .intro {
-      color: #e2e4cd;
-      font-size: 14px;
-      line-height: 1.7;
+    .hero p {
+      max-width: 570px;
+      margin: 0 auto;
+      color: #e3e4d7;
+      font-size: 15px;
     }
 
-    .content {
-      padding: 28px 24px 30px;
+    .contact-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 66px 24px 76px;
     }
 
-    .section-title {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 4vw, 36px);
+      font-weight: 400;
+      color: var(--olive-dark);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
       color: var(--muted);
-      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
     .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 17px 15px;
-      margin-bottom: 12px;
-      border: 1px solid #e8e8dc;
-      border-radius: 13px;
-      background: #fff;
-      transition: border-color 0.2s, transform 0.2s;
+      background: var(--white);
+      border: 1px solid #e5e4d8;
+      border-radius: 12px;
+      padding: 27px 25px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .contact-card:hover {
-      border-color: #b7bd82;
-      transform: translateY(-1px);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px #30360010;
     }
 
-    .icon {
+    .contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 43px;
       height: 43px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border-radius: 50%;
       background: var(--olive-light);
       color: var(--olive);
-      border-radius: 12px;
       font-size: 20px;
+      margin-bottom: 17px;
     }
 
-    .details {
-      min-width: 0;
-      flex: 1;
+    .contact-card h3 {
+      color: var(--olive-dark);
+      font-size: 17px;
+      margin-bottom: 7px;
     }
 
-    .role {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .phone {
+    .contact-card p {
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
+      margin-bottom: 13px;
     }
 
-    .call {
-      flex-shrink: 0;
+    .contact-card a {
       color: var(--olive);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 9px 11px;
-      border: 1px solid #d9ddba;
-      border-radius: 8px;
-    }
-
-    .call:hover {
-      background: var(--olive);
-      color: var(--white);
-    }
-
-    .other-title {
-      margin-top: 27px;
-    }
-
-    .action {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      min-height: 51px;
-      padding: 14px 16px;
-      margin-top: 11px;
-      border-radius: 10px;
-      text-align: center;
-      text-decoration: none;
       font-size: 14px;
       font-weight: 700;
+      text-decoration: none;
       overflow-wrap: anywhere;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      margin-top: 44px;
+      padding: 32px 24px;
+      background: #edf0d9;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #e1e5c9;
+    }
+
+    .highlight h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 26px;
+      color: var(--olive-dark);
+      margin-bottom: 8px;
+    }
+
+    .highlight p {
+      max-width: 570px;
+      margin: 0 auto 20px;
+      color: #62664d;
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--olive-dark);
+      color: var(--white);
+      padding: 12px 23px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
       transition: background 0.2s;
     }
 
-    .action-primary {
+    .button:hover {
       background: var(--olive);
-      color: var(--white);
     }
 
-    .action-primary:hover {
+    footer {
       background: var(--olive-dark);
-    }
-
-    .action-secondary {
-      border: 1px solid #d9ddba;
-      color: var(--olive);
-      background: var(--white);
-    }
-
-    .action-secondary:hover {
-      background: var(--olive-light);
-    }
-
-    .footer {
-      border-top: 1px solid #e8e8dc;
-      padding: 20px 22px;
+      color: #e5e5d9;
       text-align: center;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.8;
+      padding: 28px 20px;
+      font-size: 12px;
     }
 
-    .footer strong {
-      color: var(--olive);
-      font-weight: 700;
+    footer img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      background: white;
+      border-radius: 7px;
+      padding: 5px;
+      margin-bottom: 12px;
     }
 
-    @media (max-width: 380px) {
-      .content {
-        padding: 22px 16px;
+    footer p {
+      margin: 4px 0;
+    }
+
+    footer a {
+      color: #e6d18d;
+      text-decoration: none;
+    }
+
+    @media (max-width: 620px) {
+      .topbar {
+        padding: 12px 5%;
+      }
+
+      .brand {
+        font-size: 12px;
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .topbar a {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+
+      .contact-section {
+        padding: 46px 18px 55px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
       .contact-card {
-        gap: 10px;
-        padding: 13px 10px;
+        padding: 23px;
       }
 
-      .icon {
-        width: 36px;
-        height: 36px;
-        font-size: 17px;
-      }
-
-      .call {
-        padding: 8px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        transition: none !important;
+      .highlight h2 {
+        font-size: 23px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
-
-    <header class="header">
-
-      <!-- Upload your transparent logo as:
-           microbamboocotton-logo.png -->
+  <header class="topbar">
+    <div class="brand">
       <img
-        class="logo"
-        src="./microbamboocotton-logo.png"
+        src="microbamboocotton-logo.png"
+        alt="Hallmark MicroBambooCotton logo"
+      >
+      <span>HALLMARK KNIT FABRICS</span>
+    </div>
+
+    <a href="https://hmbc.in/" target="_blank" rel="noopener noreferrer">
+      Official Website ↗
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img
+        src="microbamboocotton-logo.png"
         alt="Hallmark MicroBambooCotton"
+        class="hero-logo"
       >
 
-      <p class="eyebrow">Official Contact Directory</p>
+      <div class="eyebrow">Hallmark Knit Fabrics</div>
 
-      <h1>Let's Connect</h1>
+      <h1>Let's Connect.</h1>
 
-      <p class="intro">
-        For sales enquiries, fabric exports and
-        sustainability-related discussions.
+      <p>
+        Thoughtfully developed knitted fabrics, innovative textile
+        solutions and a team ready to help with your enquiries.
       </p>
-
-    </header>
-
-    <section class="content">
-
-      <h2 class="section-title">Contact Our Team</h2>
-
-      <article class="contact-card">
-        <div class="icon" aria-hidden="true">♙</div>
-        <div class="details">
-          <h3 class="role">Managing Director</h3>
-          <p class="phone">+91 96 7777 1199</p>
-        </div>
-        <a class="call" href="tel:+919677771199"
-           aria-label="Call Managing Director">Call ↗</a>
-      </article>
-
-      <article class="contact-card">
-        <div class="icon" aria-hidden="true">↗</div>
-        <div class="details">
-          <h3 class="role">Sales &amp; Enquiries</h3>
-          <p class="phone">+91 96777 11363</p>
-        </div>
-        <a class="call" href="tel:+919677711363"
-           aria-label="Call Sales and Enquiries">Call ↗</a>
-      </article>
-
-      <article class="contact-card">
-        <div class="icon" aria-hidden="true">♧</div>
-        <div class="details">
-          <h3 class="role">Fabric Export &amp; Sustainability</h3>
-          <p class="phone">+91 88700 90407</p>
-        </div>
-        <a class="call" href="tel:+918870090407"
-           aria-label="Call Fabric Export and Sustainability">Call ↗</a>
-      </article>
-
-      <h2 class="section-title other-title">Connect With Us</h2>
-
-      <a class="action action-primary"
-         href="mailto:hallmark@hmbc.in">
-        ✉ &nbsp; hallmark@hmbc.in
-      </a>
-
-      <a class="action action-secondary"
-         href="https://www.hmbc.in"
-         target="_blank"
-         rel="noopener noreferrer">
-        Explore Our Website &nbsp; ↗
-      </a>
-
     </section>
 
-    <footer class="footer">
-      <strong>Hallmark MicroBambooCotton</strong>
-      <br>
-      Hallmark Knit Fabrics Pvt. Ltd.
-      <br>
-      Tiruppur, Tamil Nadu, India
-    </footer>
+    <section class="contact-section">
+      <div class="section-heading">
+        <h2>Get in Touch</h2>
+        <p>
+          Contact our team for product information, fabric enquiries
+          and business opportunities.
+        </p>
+      </div>
 
+      <div class="contact-grid">
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">✉</div>
+          <h3>Email Us</h3>
+          <p>For sales, product and general enquiries.</p>
+          <a href="mailto:hallmark@hmbc.in">
+            hallmark@hmbc.in
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">⌘</div>
+          <h3>Visit Our Website</h3>
+          <p>Discover more about Hallmark Knit Fabrics.</p>
+          <a href="https://hmbc.in/"
+             target="_blank"
+             rel="noopener noreferrer">
+            www.hmbc.in ↗
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">▤</div>
+          <h3>Fabric Enquiries</h3>
+          <p>
+            Discuss knitted fabric specifications and your
+            sourcing requirements with our team.
+          </p>
+          <a href="mailto:hallmark@hmbc.in?subject=Fabric%20Enquiry">
+            Send a Fabric Enquiry ↗
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">✧</div>
+          <h3>MicroBambooCotton</h3>
+          <p>
+            Ask us about our MicroBambooCotton fabric range
+            and available product specifications.
+          </p>
+          <a href="mailto:hallmark@hmbc.in?subject=MicroBambooCotton%20Enquiry">
+            Enquire About the Range ↗
+          </a>
+        </article>
+      </div>
+
+      <div class="highlight">
+        <h2>Let's Build Something Better.</h2>
+        <p>
+          Have a fabric requirement or want to learn more about
+          our textile solutions? We look forward to hearing from you.
+        </p>
+
+        <a class="button"
+           href="mailto:hallmark@hmbc.in?subject=Business%20Enquiry">
+          Contact Our Team
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <img
+      src="microbamboocotton-logo.png"
+      alt="Hallmark MicroBambooCotton logo"
+    >
+
+    <p><strong>HALLMARK KNIT FABRICS</strong></p>
+    <p>Knitted Fabric Solutions</p>
+    <p>
+      <a href="https://hmbc.in/" target="_blank"
+         rel="noopener noreferrer">hmbc.in</a>
+      &nbsp; | &nbsp;
+      <a href="mailto:hallmark@hmbc.in">hallmark@hmbc.in</a>
+    </p>
+    <p>&copy; <span id="year">2026</span> Hallmark Knit Fabrics. All rights reserved.</p>
+  </footer>
 </body>
 </html>
